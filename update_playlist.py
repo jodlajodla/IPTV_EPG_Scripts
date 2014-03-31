@@ -99,7 +99,6 @@ def write_playlist(output_file, file_type, codec):
 			for chanel in sorted(channelsXML.values(), key=lambda chanel: chanel['name']):
 				if (channel['name'].strip() == chanel['name'].decode('UTF-8').strip()):
 					channel['xmltv'] = chanel['xmltv']
-				tanimotoVal = None
 	playlist = codecs.open(output_file, 'w+', codec)
 	if file_type == 'm3u':
 		playlist.write('#EXTM3U\n#EXTNAME:Updated Playlist'+'\n\n');
